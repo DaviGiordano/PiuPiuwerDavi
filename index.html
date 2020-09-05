@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PiuPiuwer</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+    <header>
+        <nav >
+            <ul id="navegacao">
+                <li><input type="text" placeholder="Buscar"></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Explorar</a></li>
+                <li><a href="#">Seguindo</a></li>
+            </ul>
+        </nav>
+        <img id="logo" src="img/Logo topo.png" alt="">
+
+        <div id="perfil">
+            <a id="perfilUsuario" href="#">Meu perfil</a>
+            <img id="fotoUsuario" src="img/Ellipse 2.png" alt="">    
+        </div>
+       
+    </header>
     
+    <form id="inserirPiu" action="">
+        <input type="text">
+        <input type="submit">
+    </form>
+
+    
+    <div id="feed">
+        <p>Seu feed</p>
+        <!-- Pensando na estrutura dos pius, a ser criada no JS-->
+        <div class="piu">
+            <img class="fotoPiuwer" src="img/Ellipse 2.png" alt="">
+            <p class="nomePiuwer">Toa Heftiba</p>
+            <p class="mensagemPiuwer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, asperiores.</p>
+        </div>
+    </div>
+
 </body>
 </html>
