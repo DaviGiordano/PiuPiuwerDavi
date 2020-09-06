@@ -1,4 +1,8 @@
- #imagem{
+ 
+body{
+    background-repeat: no-repeat;
+} 
+ #divLogo{
     display: flex;
     justify-content: center;
 }
@@ -9,16 +13,39 @@
     list-style-type: none;
     padding-inline-start: 0px;
     margin-right: 200px;
+    align-items: center;
     justify-content: space-around;
     max-width: 500px;
 }
-
-a{
+#navegacao a,#divPerfil a{
+    font-family: Verdana, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
     text-decoration: none;
     margin: 5px;
+    color: #000000;
+}
+#navegacao input{
+    border: 2px solid #00296B;
+    border-radius: 13px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: normal;
+    height: 20px;
+    max-width: 150px;
+    padding-left: 10px;
+    background: none;
+    
 }
 
-#perfil{
+::placeholder{
+    font-weight: normal;
+    color: #000000;
+}
+
+#divPerfil{
     display: flex;
     flex-flow: column wrap;
     align-content: center;
@@ -27,13 +54,14 @@ a{
     right: 30px;
     top: 10px;
     width: fit-content;
+    font-style: normal;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
 }
-@media all and (max-width:850px){
-    #imagem{
-        justify-content: left;
-    }
-}
-@media all and (max-width:600px){
+
+
+@media all and (max-width:700px){
     #logo{
         width:50%;
         min-width: 200px;
@@ -44,29 +72,46 @@ a{
     #navegacao{
         margin-right: 0;
     }
-    #perfil{
+    #divPerfil{
         position: relative;
         right: auto;
     }
 }
 
-#inserirPiu{
+#divInserirPiu{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
-#inserirPiu input{
+#divInserirPiu input{
     margin: 10px;
+    border: 2px solid #00296B;
+    border-radius: 13px;
+    width: 300px;
+    height: 50px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: normal;
+    background: none;
+    text-align: ;
 }
 
-#feed{
+#divInserirPiu button{
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+#divFeed{
     display: flex;
     justify-content: center;
 }
-#feed .piu{
+#divFeed .piu{
     margin: 50px 0px;
 
 }
-#feed .fotoPiuwer{
+#divFeed .fotoPiuwer{
     width: 50px;
 }
