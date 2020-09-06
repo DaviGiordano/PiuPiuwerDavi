@@ -1,0 +1,72 @@
+ #imagem{
+    display: flex;
+    justify-content: center;
+}
+
+#navegacao{
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    padding-inline-start: 0px;
+    margin-right: 200px;
+    justify-content: space-around;
+    max-width: 500px;
+}
+
+a{
+    text-decoration: none;
+    margin: 5px;
+}
+
+#perfil{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    width: fit-content;
+}
+@media all and (max-width:850px){
+    #imagem{
+        justify-content: left;
+    }
+}
+@media all and (max-width:600px){
+    #logo{
+        width:50%;
+        min-width: 200px;
+    }
+    #fotoUsuario{
+        width:70%;
+    }
+    #navegacao{
+        margin-right: 0;
+    }
+    #perfil{
+        position: relative;
+        right: auto;
+    }
+}
+
+#inserirPiu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#inserirPiu input{
+    margin: 10px;
+}
+
+#feed{
+    display: flex;
+    justify-content: center;
+}
+#feed .piu{
+    margin: 50px 0px;
+
+}
+#feed .fotoPiuwer{
+    width: 50px;
+}
