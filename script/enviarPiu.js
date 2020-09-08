@@ -5,7 +5,7 @@ var divInserirPiu = document.querySelector("#divInserirPiu")
 var avisoCampoVazio = document.querySelector("#avisoCampoVazio");
 var divFeed = document.querySelector("#divFeed");
 var contador = document.querySelector("#contador");
-
+var numMensagens = 0;
 enviarPiu.addEventListener("click", function(){
     var digitado = caixaTexto.value;
     if(digitado.length == 0){
@@ -13,10 +13,15 @@ enviarPiu.addEventListener("click", function(){
        contador.style.display = "none";
     }
     else{
+        numMensagens += 1;
+        var pessoa = new Object;
+        pessoa.nome = "Alan Schnauser";
+        pessoa.username = "@alanCrocodile"+numMensagens;
+        pessoa.mensagem = digitado;
+        listaPius.unshift(pessoa);
         var box = document.createElement("div");
         box.classList.add("piu");
-        box.style.order = 1;
-        //isso funciona por enquanto, mas as orders tao sempre ficando == 1
+        box.id = "@alanCrocodile"+numMensagens;
         divFeed.appendChild(box);
 
         var img = document.createElement("img");
@@ -37,6 +42,10 @@ enviarPiu.addEventListener("click", function(){
 
         caixaTexto.value = "";
         contador.innerHTML = "0/140";
+
+        listaPius.forEach(element => {
+            document.getElementById(element.username).style.order = listaPius.indexOf(element);
+        });
     }
     console.log(digitado.length);
     
