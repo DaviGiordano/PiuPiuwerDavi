@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PiuPiuwer</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Quicksand:bold,Quicksand">
 </head>
-<body>
+<body onload="fazerRequest()">
+
     <div id="divLogo"><img id="logo" src="img/Logo topo.svg" alt=""></div>
     
     <header>
@@ -28,22 +31,24 @@
     </header>
     
     <div id="divInserirPiu">
-        <input type="text" >
+        <textarea placeholder="O que você está ciscando hoje?" name="digitarPiu" id="digitarPiu" cols="30" rows="10"></textarea>
         <button id="enviarPiu">Piu</button>
-
     </div>
-
+    <p id="avisoCampoVazio">O campo está vazio</p>
+    <small id="contador">0/140</small>
     
-    
+    <p id="seuFeed">Seu Feed</p>
     <div id="divFeed">
-        <p>Seu divFeed</p>
 
-        <div class="piu">
+       <!-- <div class="piu">
             <img class="fotoPiuwer" src="img/Ellipse 2.png" alt="">
             <p class="nomePiuwer">Toa Heftiba</p>
             <p class="mensagemPiuwer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, asperiores.</p>
-        </div>
+        </div>-->
+        
     </div>
-    
+    <script src="script/validarPiu.js"></script>
+    <script src="script/httpRequest.js"></script>
+    <script src="script/enviarPiu.js"></script>
 </body>
 </html>

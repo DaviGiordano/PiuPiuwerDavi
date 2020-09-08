@@ -1,7 +1,11 @@
- 
+
 body{
+    background: linear-gradient(180deg, #86B5FD 0%, #C1D9FC 14.58%, #F5F8FC 30.21%, #F5F8FC 48.44%, #F5F8FC 69.27%);
     background-repeat: no-repeat;
 } 
+p{
+    word-break: normal;
+}
  #divLogo{
     display: flex;
     justify-content: center;
@@ -18,7 +22,7 @@ body{
     max-width: 500px;
 }
 #navegacao a,#divPerfil a{
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: 'Quicksand';
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -26,10 +30,15 @@ body{
     margin: 5px;
     color: #000000;
 }
+#navegacao a:hover,#divPerfil a:hover{
+    color: #003F88;
+}
 #navegacao input{
-    border: 2px solid #00296B;
+    background: #E5E5E5;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border: none;
     border-radius: 13px;
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: 'Quicksand';
     font-style: normal;
     font-size: 18px;
     font-weight: normal;
@@ -37,7 +46,6 @@ body{
     max-width: 150px;
     padding-left: 10px;
     background: none;
-    
 }
 
 ::placeholder{
@@ -55,7 +63,7 @@ body{
     top: 10px;
     width: fit-content;
     font-style: normal;
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: 'Quicksand';
     font-weight: bold;
     font-size: 20px;
 }
@@ -76,42 +84,128 @@ body{
         position: relative;
         right: auto;
     }
+    #navegacao input{
+    margin-top: 10px;
+
+    }
 }
 
 #divInserirPiu{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     margin-top: 50px;
 }
-#divInserirPiu input{
+#divInserirPiu textarea{
     margin: 10px;
-    border: 2px solid #00296B;
+    padding-left: 10px;
+    border: none;
+    background: #E5E5E5;
+    -webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 5px rgba(0, 0, 0, 0.5);
     border-radius: 13px;
-    width: 300px;
-    height: 50px;
-    font-family: Verdana, Tahoma, sans-serif;
+    width: 50%;
+    height: 100px;
+    font-family: 'Quicksand';
     font-style: normal;
     font-size: 15px;
     font-weight: normal;
     background: none;
-    text-align: ;
 }
 
-#divInserirPiu button{
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 40px;
+#enviarPiu{
+    min-width: 50px;
+    min-height: 30px;
+    margin-bottom: 10px;
+    background: #003F88;
+    -webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid #003F88;
+    border-radius: 13px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+#enviarPiu:hover{
+    cursor: pointer;
+}
+/*#enviarPiu:hover{
+    cursor: pointer;
+    background: none;
+    color: #003F88;
+    font-weight: bolder;
+}*/
+#avisoCampoVazio{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-size: 15px;
+    color: red;
+    display: none;
+    justify-content: center;
+    transition: 0.3;
+    position: relative;
+    left: 20%;
+}
+#contador{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-size: 12px;
+    margin: 0em;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 25%;
 }
 #divFeed{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+#seuFeed{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    right: 25%;
 }
 #divFeed .piu{
-    margin: 50px 0px;
-
+    margin: 10px 0px;
+    background-color: red;
+    background: #E5F1EF;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+    padding: 10px;
+    width: 80%;
+   
+}
+#divFeed .nomePiuwer{
+    margin: 0;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
 }
 #divFeed .fotoPiuwer{
-    width: 50px;
+    border-radius: 50px;
+    width: 100px;
+}
+
+#divFeed .mensagemPiuwer{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+    font-size: 18px;
 }
