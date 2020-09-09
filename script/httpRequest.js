@@ -53,7 +53,7 @@ function fazerRequest(){
             var likeBtn = document.createElement("img");
             likeBtn.classList.add("likeBtn");
             likeBtn.id = "likeBtn" + element.username;
-            likeBtn.setAttribute("src","../img/CoracaoVazio.svg");
+            likeBtn.setAttribute("src","img/CoracaoVazio.svg");
             divInteracoes.appendChild(likeBtn);
 
             pessoa.liked = false;
@@ -69,13 +69,13 @@ function fazerRequest(){
                 if(pessoa.liked==false){
                     pessoa.numLikes++;
                     contadorLike.innerHTML = pessoa.numLikes;
-                    likeBtn.setAttribute("src","../img/CoracaoCheio.svg");
+                    likeBtn.setAttribute("src","img/CoracaoCheio.svg");
                     pessoa.liked=true;
                 }
                 else if(pessoa.liked==true){
                     pessoa.numLikes--;
                     contadorLike.innerHTML = pessoa.numLikes;
-                    likeBtn.setAttribute("src","../img/CoracaoVazio.svg");
+                    likeBtn.setAttribute("src","img/CoracaoVazio.svg");
                     pessoa.liked=false;
                 }
                 
@@ -85,14 +85,14 @@ function fazerRequest(){
             var pinBtn = document.createElement("img");
             pinBtn.classList.add("pinBtn");
             pinBtn.id = "pinBtn" + element.username;
-            pinBtn.setAttribute("src","../img/AlfineteVazio.svg");
+            pinBtn.setAttribute("src","img/AlfineteVazio.svg");
             divInteracoes.appendChild(pinBtn);
             pessoa.pinned = false;
 
             pinBtn.addEventListener("click",function(){
                 if(pessoa.pinned==false){
                     
-                    pinBtn.setAttribute("src","../img/AlfineteCheio.svg");
+                    pinBtn.setAttribute("src","img/AlfineteCheio.svg");
                     pessoa.pinned=true;
                     listaPius.forEach(element => {
                         document.getElementById(element.username).style.display = "none";
@@ -102,7 +102,7 @@ function fazerRequest(){
                 }
                 else if(pessoa.pinned==true){
 
-                    pinBtn.setAttribute("src","../img/AlfineteVazio.svg");
+                    pinBtn.setAttribute("src","img/AlfineteVazio.svg");
                     pessoa.pinned=false;
                     document.getElementById(pessoa.username).style.display = "none";
                     document.getElementById(pessoa.username).style.border = "none";
