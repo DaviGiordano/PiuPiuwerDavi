@@ -38,11 +38,54 @@ function fazerRequest(){
             nome.innerHTML = element.nome;
             box.appendChild(nome);
 
+            var usernameSpan = document.createElement("span");
+            usernameSpan.classList.add("usernameSpan");
+            usernameSpan.innerHTML = " " + element.username;
+            nome.appendChild(usernameSpan);
+
             var msg = document.createElement("p");
             msg.classList.add("mensagemPiuwer");
             msg.innerHTML = element.mensagem;
             box.appendChild(msg);
             i++;
+
+            var divInteracoes = document.createElement("div");
+            divInteracoes.classList.add("divInteracoes");
+            box.appendChild(divInteracoes);
+
+            var likeBtn = document.createElement("img");
+            likeBtn.classList.add("likeBtn");
+            likeBtn.id = "likeBtn" + element.username;
+            likeBtn.setAttribute("src","../img/CoracaoVazio.svg");
+            divInteracoes.appendChild(likeBtn);
+
+            pessoa.liked = false;
+
+            var contadorLike = document.createElement("span");
+            pessoa.numLikes = 0;
+            contadorLike.classList.add("contadorLike");
+            contadorLike.id = "contadorLike" + element.username;
+            contadorLike.innerHTML = pessoa.numLikes;
+            divInteracoes.appendChild(contadorLike);
+
+            likeBtn.addEventListener("click",function(){
+                if(pessoa.liked==false){
+                    pessoa.numLikes++;
+                    contadorLike.innerHTML = pessoa.numLikes;
+                    likeBtn.setAttribute("src","../img/CoracaoCheio.svg");
+                    pessoa.liked=true;
+                }
+                else if(pessoa.liked==true){
+                    pessoa.numLikes--;
+                    contadorLike.innerHTML = pessoa.numLikes;
+                    likeBtn.setAttribute("src","../img/CoracaoVazio.svg");
+                    pessoa.liked=false;
+                }
+                
+
+            });
+
+            
         });
         listaPius.forEach(element => {
             document.getElementById(element.username).style.order = listaPius.indexOf(element);
