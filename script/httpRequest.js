@@ -10,17 +10,14 @@ function fazerRequest(){
         console.log(data);
         var i = 2;
         data.forEach(element => {
-            //console.log(element.nome);
-            //console.log(element.mensagem);
-            //console.log(element.imagem);
+
 
             var pessoa = new Object;
             pessoa.nome = element.nome;
             pessoa.username = element.username;
             pessoa.mensagem = element.mensagem;
             listaPius.unshift(pessoa);
-            console.log(listaPius);
-            console.log(listaPius.indexOf(pessoa));
+           
             var box = document.createElement("div");
             box.classList.add("piu");
             box.id = element.username;
@@ -85,7 +82,38 @@ function fazerRequest(){
 
             });
 
-            
+            var pinBtn = document.createElement("img");
+            pinBtn.classList.add("pinBtn");
+            pinBtn.id = "pinBtn" + element.username;
+            pinBtn.setAttribute("src","../img/AlfineteVazio.svg");
+            divInteracoes.appendChild(pinBtn);
+            pessoa.pinned = false;
+
+            pinBtn.addEventListener("click",function(){
+                if(pessoa.pinned==false){
+                    
+                    pinBtn.setAttribute("src","../img/AlfineteCheio.svg");
+                    pessoa.pinned=true;
+                    listaPius.forEach(element => {
+                        document.getElementById(element.username).style.display = "none";
+                    });
+                    document.getElementById(pessoa.username).style.display = "block";
+                    document.getElementById(pessoa.username).style.border = "2px solid #003F88";
+                }
+                else if(pessoa.pinned==true){
+
+                    pinBtn.setAttribute("src","../img/AlfineteVazio.svg");
+                    pessoa.pinned=false;
+                    document.getElementById(pessoa.username).style.display = "none";
+                    document.getElementById(pessoa.username).style.border = "none";
+
+                    listaPius.forEach(element => {
+                        document.getElementById(element.username).style.display = "block";
+                    });
+                }
+                
+
+            });
         });
         listaPius.forEach(element => {
             document.getElementById(element.username).style.order = listaPius.indexOf(element);
