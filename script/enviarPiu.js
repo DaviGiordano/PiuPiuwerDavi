@@ -28,7 +28,7 @@ enviarPiu.addEventListener("click", function(){
 
         var img = document.createElement("img");
         img.classList.add("fotoPiuwer");
-        img.setAttribute("src","img/emmanuel-gido.jpg");
+        img.setAttribute("src","img/emmanuel-gido-piu.png");
         box.appendChild(img);
 
         var nome = document.createElement("p");

@@ -226,6 +226,7 @@ p{
    cursor: pointer;
 }
 .contadorLike{
+    font-family: 'Quicksand';
     margin-left: 5px;
     padding-top: 2.5px;
     color: red;
