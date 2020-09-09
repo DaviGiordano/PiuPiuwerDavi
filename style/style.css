@@ -4,7 +4,7 @@ body{
     background-repeat: no-repeat;
 } 
 p{
-    word-break: normal;
+    word-break: break-word;
 }
  #divLogo{
     display: flex;
@@ -72,10 +72,10 @@ p{
 @media all and (max-width:700px){
     #logo{
         width:50%;
-        min-width: 200px;
+        min-width: 100px;
     }
     #fotoUsuario{
-        width:70%;
+        width:50%;
     }
     #navegacao{
         margin-right: 0;
@@ -83,9 +83,10 @@ p{
     #divPerfil{
         position: relative;
         right: auto;
+        margin-bottom: 50px;
     }
     #navegacao input{
-    margin-top: 10px;
+    margin: 30px;
 
     }
 }
