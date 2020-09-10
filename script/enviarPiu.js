@@ -3,6 +3,7 @@ var caixaTexto = document.querySelector("#digitarPiu");
 var enviarPiu = document.querySelector("#enviarPiu");
 var divInserirPiu = document.querySelector("#divInserirPiu")
 var avisoCampoVazio = document.querySelector("#avisoCampoVazio");
+var divFixado = document.querySelector("#divFixado");
 var divFeed = document.querySelector("#divFeed");
 var contador = document.querySelector("#contador");
 var numMensagens = 0;
@@ -101,25 +102,14 @@ enviarPiu.addEventListener("click", function(){
                     
                     pinBtn.setAttribute("src","img/AlfineteCheio.svg");
                     pessoa.pinned=true;
-                    listaPius.forEach(element => {
-                        document.getElementById(element.username).style.display = "none";
-                    });
-                    document.getElementById(pessoa.username).style.display = "block";
-                    document.getElementById(pessoa.username).style.border = "2px solid #003F88";
+                    divFixado.appendChild(document.getElementById(pessoa.username));
                 }
                 else if(pessoa.pinned==true){
 
                     pinBtn.setAttribute("src","img/AlfineteVazio.svg");
                     pessoa.pinned=false;
-                    document.getElementById(pessoa.username).style.display = "none";
-                    document.getElementById(pessoa.username).style.border = "none";
-
-                    listaPius.forEach(element => {
-                        document.getElementById(element.username).style.display = "block";
-                    });
+                    divFeed.appendChild(document.getElementById(pessoa.username));
                 }
-                
-
             });
     }
     console.log(digitado.length);

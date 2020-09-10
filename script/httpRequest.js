@@ -28,6 +28,9 @@ function fazerRequest(){
             var img = document.createElement("img");
             img.classList.add("fotoPiuwer");
             img.setAttribute("src",element.imagem);
+            if(element.imagem===""){
+                img.setAttribute("src","img/LogoSimples.png");
+            }
             box.appendChild(img);
 
             var nome = document.createElement("p");
@@ -94,22 +97,13 @@ function fazerRequest(){
                     
                     pinBtn.setAttribute("src","img/AlfineteCheio.svg");
                     pessoa.pinned=true;
-                    listaPius.forEach(element => {
-                        document.getElementById(element.username).style.display = "none";
-                    });
-                    document.getElementById(pessoa.username).style.display = "block";
-                    document.getElementById(pessoa.username).style.border = "2px solid #003F88";
+                    divFixado.appendChild(document.getElementById(pessoa.username));
                 }
                 else if(pessoa.pinned==true){
 
                     pinBtn.setAttribute("src","img/AlfineteVazio.svg");
                     pessoa.pinned=false;
-                    document.getElementById(pessoa.username).style.display = "none";
-                    document.getElementById(pessoa.username).style.border = "none";
-
-                    listaPius.forEach(element => {
-                        document.getElementById(element.username).style.display = "block";
-                    });
+                    divFeed.appendChild(document.getElementById(pessoa.username));
                 }
                 
 

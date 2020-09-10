@@ -2,6 +2,7 @@
 body{
     background: linear-gradient(180deg, #86B5FD 0%, #C1D9FC 14.58%, #F5F8FC 30.21%, #F5F8FC 48.44%, #F5F8FC 69.27%);
     background-repeat: no-repeat;
+    background-attachment: fixed;
 } 
 p{
     word-break: break-word;
@@ -167,6 +168,12 @@ p{
     justify-content: center;
     align-items: center;
 }
+#divFixado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 #seuFeed{
     font-family: 'Quicksand';
     font-style: normal;
@@ -181,7 +188,7 @@ p{
     position: relative;
     right: 25%;
 }
-#divFeed .piu{
+.piu{
     margin: 10px 0px;
     background-color: red;
     background: #E5F1EF;
@@ -191,7 +198,7 @@ p{
     width: 60%;
    
 }
-#divFeed .nomePiuwer{
+.nomePiuwer{
     margin: 0;
     font-family: 'Quicksand';
     font-style: normal;
@@ -205,12 +212,12 @@ p{
     font-weight: lighter;
     font-size: 12px;
 }
-#divFeed .fotoPiuwer{
+.fotoPiuwer{
     border-radius: 50px;
     width: 100px;
 }
 
-#divFeed .mensagemPiuwer{
+.mensagemPiuwer{
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: normal;

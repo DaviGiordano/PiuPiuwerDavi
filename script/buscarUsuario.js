@@ -4,8 +4,10 @@ buscarInput.addEventListener("input", function(){
     if(buscarInput.value != ""){
         seuFeed.innerHTML = "Resultados da busca";
         listaPius.forEach(objetos => {
-            
-            if(objetos.username.indexOf(buscarInput.value) > -1){
+            digitado = buscarInput.value;
+            console.log(digitado.toUpperCase());
+            console.log(objetos.username.toUpperCase());
+            if(objetos.username.toUpperCase().indexOf(digitado.toUpperCase()) > -1){
                 document.getElementById(objetos.username).style.display = "block";
                 document.getElementById(objetos.username).style.border = "2px solid #003F88";
             }else{
